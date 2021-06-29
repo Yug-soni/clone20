@@ -1,12 +1,16 @@
 import React from "react";
 import "./App.css";
-import MainPage from "./Components/MainPage";
+import { Switch, Route } from "react-router-dom";
 
+// Importing pages
+import HomePage from "./pages/home-page/home-page.component";
 class App extends React.Component {
   render() {
     return (
       <div>
-        <MainPage></MainPage>
+        <Switch>
+          <Route path="/" component={HomePage} />
+        </Switch>
       </div>
     );
   }
